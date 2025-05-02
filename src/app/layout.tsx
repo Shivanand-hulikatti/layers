@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import logo from "@/assets/images/logo.svg";
 const inter = Inter({
     variable: "--font-inter",
     subsets: ["latin"],
@@ -10,7 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "Landing Page",
+    title: "Layers",
+    icons: logo,
 };
 
 export default function RootLayout({
