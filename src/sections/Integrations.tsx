@@ -1,13 +1,11 @@
 import Tag from "@/components/Tag";
-import  figmaIcon from '@/assets/images/figma-logo.svg'
-import  notionIcon from '@/assets/images/notion-logo.svg'
-import  slackIcon from '@/assets/images/slack-logo.svg'
-import  relumeIcon from '@/assets/images/relume-logo.svg'
-import  framerIcon from '@/assets/images/framer-logo.svg'
-import  githubIcon from '@/assets/images/github-logo.svg'
-import Image from "next/image";
+import figmaIcon from "@/assets/images/figma-logo.svg";
+import notionIcon from "@/assets/images/notion-logo.svg";
+import slackIcon from "@/assets/images/slack-logo.svg";
+import relumeIcon from "@/assets/images/relume-logo.svg";
+import framerIcon from "@/assets/images/framer-logo.svg";
+import githubIcon from "@/assets/images/github-logo.svg";
 import IntegrationColumn from "@/components/integrationColumn";
-
 
 const integrations = [
     {
@@ -44,7 +42,6 @@ const integrations = [
 
 export type integrationType = typeof integrations;
 
-
 export default function Integrations() {
     return (
         <section className="py-24 overflow-hidden">
@@ -53,18 +50,23 @@ export default function Integrations() {
                     <div>
                         <Tag>Integrations</Tag>
                         <h2 className="text-6xl font-medium mt-6">
-                            Plays well with <span className="text-lime-400">others</span>
+                            Plays well with{" "}
+                            <span className="text-lime-400">others</span>
                         </h2>
                         <p className="text-lg text-white/50 mt-4">
-                            Layers seemlessly connects with your favorite tools, making
-                            it easy to plug into any workflow and collaborate across
-                            platforms.
+                            Layers seemlessly connects with your favorite tools,
+                            making it easy to plug into any workflow and
+                            collaborate across platforms.
                         </p>
                     </div>
                     <div>
                         <div className="h-[400px] lg:h-[800px] grid md:grid-cols-2 gap-4 mt-8 lg:mt-0 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
                             <IntegrationColumn integrations={integrations} />
-                            <IntegrationColumn integrations={integrations.slice().reverse()} className="hidden md:flex"/>
+                            <IntegrationColumn
+                                reverse={true}
+                                integrations={integrations.slice().reverse()}
+                                className="hidden md:flex"
+                            />
                         </div>
                     </div>
                 </div>
