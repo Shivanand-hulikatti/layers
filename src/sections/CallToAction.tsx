@@ -1,11 +1,12 @@
 "use client";
 
-import { AnimationPlaybackControls, motion, useAnimate } from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import type { AnimationPlaybackControls } from "framer-motion";
 
 export default function CallToAction() {
     const [isHovered, setIsHovered] = useState(false);
-    const animation = useRef<any>(null);
+    const animation = useRef<AnimationPlaybackControls | null>(null);
     const [scope, animate] = useAnimate();
 
     useEffect(() => {
